@@ -75,13 +75,14 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+		boolean cond = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (atacado.serAtacado((int) (caster.calcularPuntosDeMagia() * MULTIPLICADORMAGIA)) > 0) {
-				return true;
+				cond = true;
 			}
 		}
-		return false;
+		return cond;
 	}
 
 
@@ -102,14 +103,15 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad2(final Personaje caster, final Peleable aliado) {
+		boolean cond = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (aliado instanceof Personaje) {
 				((Personaje) aliado).serCurado(caster.calcularPuntosDeMagia());
-				return true;
+				cond = true;
 			}
 		}
-		return false;
+		return cond;
 	}
 
 	/** Retorna un booleano dependiendo de si se
