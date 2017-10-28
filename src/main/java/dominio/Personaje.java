@@ -759,7 +759,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**Metodo que retorna un Objetc utilizado para
 	 * clonar a un personaje.
-	 * @throws CloneNotSupportedException Excepción de clonación cuando no está implementada
+	 * @throws CloneNotSupportedException 
+	 * Excepción de clonación cuando no está implementada
 	 * @return Retorna un Objetc con los atributos del
 	 * personaje llamador.
 	 */

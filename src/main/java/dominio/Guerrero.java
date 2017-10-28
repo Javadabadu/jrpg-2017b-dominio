@@ -65,13 +65,12 @@ public class Guerrero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+		boolean retorno = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(caster.getAtaque() * MULTIPLICADORFUERZA) > 0) {
-				return true;
-			}
+			retorno =(atacado.serAtacado(caster.getAtaque() * MULTIPLICADORFUERZA) > 0); 
 		}
-		return false;
+		return retorno;
 	}
 
 

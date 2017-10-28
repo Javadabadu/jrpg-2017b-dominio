@@ -26,17 +26,24 @@ public class Item implements Serializable {
 	 * @param nombre String que representa el nombre del item.
 	 * @param wearLocation Entero que representa donde se usa el item.
 	 * @param bonusSalud Entero que representa el bonus de salud del item.
-	 * @param bonusEnergia Entero que representa el bonus de energia del item.
+	 * @param bonusEnergia Entero que representa
+	 * el plus de energia del item.
 	 * @param bonusFuerza Entero que representa el bonus de fuerza del item.
-	 * @param bonusDestreza Entero que representa el bonus de destreza del item.
-	 * @param bonusInteligencia Entero que representa el bonus de inteligencia del item.
+	 * @param bonusDestreza Entero que representa el bonus de destreza
+	 * del item.
+	 * @param bonusInteligencia Entero que representa el bonus de
+	 * inteligencia del item.
 	 * @param foto String que representa el path de la foto del item.
-	 * @param fotoEquipado String que representa la foto cuando el item está equipado.
+	 * @param fotoEquipado String que representa la foto cuando el
+	 * item está equipado.
 	 * @throws IOException Cuando no se encuentra la foto del item.
 	 */
-	public Item(final int idItem, final String nombre, final int wearLocation,
-			final int bonusSalud, final int bonusEnergia, final int bonusFuerza, final int bonusDestreza,
-			final int bonusInteligencia, final String foto, final String fotoEquipado) throws IOException {
+	public Item(final int idItem, final String nombre,
+			final int wearLocation,
+			final int bonusSalud, final int bonusEnergia,
+			final int bonusFuerza, final int bonusDestreza,
+			final int bonusInteligencia, final String foto,
+			final String fotoEquipado) throws IOException {
 		this.foto = foto;
 		this.idItem = idItem;
 		this.nombre = nombre;
