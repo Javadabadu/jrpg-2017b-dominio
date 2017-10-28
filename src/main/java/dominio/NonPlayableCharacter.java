@@ -66,6 +66,9 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 */
 	private static final int MULTIPLICADORD = 1;
 
+	private int saludTope;
+	private int nivelNpc;
+	
 	/**
 	 * Constructor de la Clase.
 	 * Dependiendo de la dificultad que se pasa por parámetro al
@@ -76,9 +79,9 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 * @param dificultadNPC Valor entero
 	 * que produce una variación en los atributos.
 	 */
-	public NonPlayableCharacter(final String nombre, final int nivel, final int dificultadNPC) {
+	public NonPlayableCharacter(final String nombre, int nivel, final int dificultadNPC) {
 		super(0, 0, nivel, nombre);
-
+		this.nivelNpc = nivel;
 		int dificultad;
 		if (dificultadNPC == DIFICULTADALEATORIA) {
 			dificultad = this.getRandom().nextInt(ELEGIRDIF);
@@ -89,6 +92,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1) +
 				(nivel - 1) * MULTIPLICADORF * (dificultad + 1));
 		this.salud = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
+		this.saludTope = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
 		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1) +
 				(nivel - 1) * MULTIPLICADORD * (dificultad + 1));
 	}
@@ -211,6 +215,15 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	@Override
 	public final int getMagia() {
 		return 0;
+	}
+	
+	public int getSaludTope() {
+		return this.saludTope;
+	}
+	
+
+	public int getNivelNpc() {
+		return nivelNpc;
 	}
 }
 
