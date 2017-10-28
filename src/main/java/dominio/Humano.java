@@ -56,10 +56,20 @@ public class Humano extends Personaje {
 	 * @param nivel Nivel del personaje
 	 * @param idPersonaje Id del personaje
 	 */
-	public Humano(final String nombre, final int salud, final int energia, final int fuerza,
-			final int destreza, final int inteligencia, final Casta casta,
-			final int experiencia, final int nivel, final int idPersonaje) {
-		super(nombre, salud, energia, fuerza, destreza, inteligencia, casta, experiencia, nivel, idPersonaje);
+	public Humano(final String nombre,
+			final int salud,
+			final int energia,
+			final int fuerza,
+			final int destreza,
+			final int inteligencia,
+			final Casta casta,
+			final int experiencia,
+			final int nivel,
+			final int idPersonaje) {
+    super(nombre, salud, energia,
+    	  fuerza, destreza, inteligencia,
+    	  casta, experiencia, nivel,
+    	  idPersonaje);
 	}
 
 
@@ -81,12 +91,15 @@ public class Humano extends Personaje {
 	 */
 	@Override
 	public final boolean habilidadRaza1(final Peleable atacado) {
+		boolean retorno = false;
 		if (this.getEnergia() >= ENERGIAMINIMA) {
 			this.reducirEnergia(ENERGIAMINIMA);
-			atacado.setAtaque(atacado.getAtaque() + this.getMagia());
-			return true;
+			atacado.setAtaque(
+			atacado.getAtaque()
+			+ this.getMagia());
+			retorno = true;
 		}
-		return false;
+		return retorno;
 	}
 
 
@@ -110,14 +123,15 @@ public class Humano extends Personaje {
 	 */
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
+		boolean retorno = false;
 		if (this.getEnergia() >= ENERGIAMINIMA) {
 			if (atacado.serAtacado(atacado.getSalud() / DIVISORSALUD) > 0) {
 				this.reducirEnergia(this.getEnergia() / DIVISORENERGIA);
-				return true;
+				retorno = true;
 			}
 		}
 		this.reducirEnergia(ENERGIAMINIMA);
-		return false;
+		return retorno;
 	}
 	/**Retorna un vector de string con los nombres
 	 * de las habilidades de la raza.
