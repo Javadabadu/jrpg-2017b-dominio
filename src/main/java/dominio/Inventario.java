@@ -32,7 +32,19 @@ public class Inventario {
 		this.pecho = pecho;
 		this.accesorio = accesorio;
 	}
-	
+	/**
+	 * 
+	 * @param idInventario
+	 */
+	public Inventario(int idInventario) {
+		this.idInventario = idInventario;
+		this.manos1 = -1;
+		this.manos2 = -1;
+		this.pie = -1;
+		this.cabeza = -1;
+		this.pecho = -1;
+		this.accesorio = -1;
+	}
 	/**
 	 * Metodo que obtiene el id del Inventario
 	 * @return id Inventario
