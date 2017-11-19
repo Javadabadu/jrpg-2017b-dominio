@@ -45,6 +45,10 @@ public class Inventario {
 		this.pecho = -1;
 		this.accesorio = -1;
 	}
+	
+	public Inventario() {
+		
+	}
 	/**
 	 * Metodo que obtiene el id del Inventario
 	 * @return id Inventario

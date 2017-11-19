@@ -1,10 +1,17 @@
 package dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Mochila del jugador
  */
 public class Mochila {
-	private int idMochila;
+	private static final int CANTITEMS = 20;
+	private static final int ITEM1 = 1, ITEM2 = 2, ITEM3 = 3, ITEM4 = 4, ITEM5 = 5, ITEM6 = 6, ITEM7 = 7, ITEM8 = 8, ITEM9 = 9,
+            ITEM10 = 10;
+    private static final int ITEM11 = 11, ITEM12 = 12, ITEM13 = 13, ITEM14 = 14, ITEM15 = 15, ITEM16 = 16, ITEM17 = 17,
+            ITEM18 = 18, ITEM19 = 19, ITEM20 = 20;private int idMochila;
 	private int item1;
 	private int item2;
 	private int item3;
@@ -25,6 +32,7 @@ public class Mochila {
 	private int item18;
 	private int item19;
 	private int item20;
+	private ArrayList<Integer> items = new ArrayList<Integer>();
 
 	/**
 	 * Construye la mochila
@@ -97,6 +105,8 @@ public class Mochila {
 		this.item18 = item18;
 		this.item19 = item19;
 		this.item20 = item20;
+		
+	
 	}
 
 	/**
@@ -125,7 +135,18 @@ public class Mochila {
 		item18 = -1;
 		item19 = -1;
 		item20 = -1;
+		
 	}
+	
+	/**
+	 * Constructor por defecto
+	 */
+	
+	public Mochila() {
+		this(0);
+	}
+	
+	
 
 	/**
 	 * Get id mochila
@@ -151,6 +172,56 @@ public class Mochila {
 	 * 
 	 * @return int item1
 	 */
+	
+	  public int obtenerItem(final int i) {
+	        switch (i) {
+	        case ITEM1:
+	            return getItem1();
+
+	   	 case ITEM2:
+	   	            return getItem2();
+	   	        case ITEM3:
+	   	            return getItem3();
+	   	        case ITEM4:
+	   	            return getItem4();
+	   	        case ITEM5:
+	   	            return getItem5();
+	   	        case ITEM6:
+	   	            return getItem6();
+	   	        case ITEM7:
+	   	            return getItem7();
+	   	        case ITEM8:
+	   	            return getItem8();
+	   	        case ITEM9:
+	   	            return getItem9();
+	   	        case ITEM10:
+	   	            return getItem10();
+	   	        case ITEM11:
+	   	            return getItem11();
+	   	        case ITEM12:
+	   	            return getItem12();
+	   	        case ITEM13:
+	   	            return getItem13();
+	   	        case ITEM14:
+	   	            return getItem14();
+	   	        case ITEM15:
+	   	            return getItem15();
+	   	        case ITEM16:
+	   	            return getItem16();
+	   	        case ITEM17:
+	   	            return getItem17();
+	   	        case ITEM18:
+	   	            return getItem18();
+	   	        case ITEM19:
+	   	            return getItem19();
+	   	        case ITEM20:
+	   	            return getItem20();
+	        default:
+	            break;
+	        }
+
+	        return -1;
+	    }
 	public int getItem1() {
 		return item1;
 	}
