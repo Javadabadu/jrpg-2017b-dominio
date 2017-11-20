@@ -155,40 +155,58 @@ public class Mochila {
 		switch (i) {
 		case ITEM1:
 			retorno = getItem1();
+			break;
 		case ITEM2:
 			retorno = getItem2();
+			break;
 		case ITEM3:
 			retorno = getItem3();
+			break;
 		case ITEM4:
 			retorno = getItem4();
+			break;
 		case ITEM5:
 			retorno = getItem5();
+			break;
 		case ITEM6:
 			retorno = getItem6();
+			break;
 		case ITEM7:
 			retorno = getItem7();
+			break;
 		case ITEM8:
 			retorno = getItem8();
+			break;
 		case ITEM9:
 			retorno = getItem9();
+			break;
 		case ITEM10:
 			retorno = getItem10();
+			break;
 		case ITEM11:
 			retorno = getItem11();
+			break;
 		case ITEM12:
 			retorno = getItem12();
+			break;
 		case ITEM13:
 			retorno = getItem13();
+			break;
 		case ITEM14:
 			retorno = getItem14();
+			break;
 		case ITEM15:
 			retorno = getItem15();
+			break;
 		case ITEM16:
 			retorno = getItem16();
+			break;
 		case ITEM17:
 			retorno = getItem17();
+			break;
 		case ITEM18:
 			retorno = getItem18();
+			break;
 		case ITEM19:
 			retorno = getItem19();
 		case ITEM20:
@@ -208,45 +226,64 @@ return retorno;
 		switch (i) {
 		case ITEM1:
 			setItem1(valorItem);
+			break;
 		case ITEM2:
 			setItem2(valorItem);
+			break;
 		case ITEM3:
 			setItem3(valorItem);
+			break;
 		case ITEM4:
 			setItem4(valorItem);
+			break;
 		case ITEM5:
 			setItem5(valorItem);
+			break;
 		case ITEM6:
 			setItem6(valorItem);
+			break;
 		case ITEM7:
 			setItem7(valorItem);
+			break;
 		case ITEM8:
 			setItem8(valorItem);
+			break;
 		case ITEM9:
 			setItem9(valorItem);
+			break;
 		case ITEM10:
 			setItem10(valorItem);
+			break;
 		case ITEM11:
 			setItem11(valorItem);
+			break;
 		case ITEM12:
 			setItem12(valorItem);
+			break;
 		case ITEM13:
 			setItem13(valorItem);
+			break;
 		case ITEM14:
 			setItem4(valorItem);
+			break;
 		case ITEM15:
 			setItem15(valorItem);
+			break;
 		case ITEM16:
 			setItem16(valorItem);
+			break;
 		case ITEM17:
 			setItem17(valorItem);
+			break;
 		case ITEM18:
 			setItem18(valorItem);
+			break;
 		case ITEM19:
 			setItem19(valorItem);
+			break;
 		case ITEM20:
 			setItem20(valorItem);
-		
+			break;
 		}
 		
 	}

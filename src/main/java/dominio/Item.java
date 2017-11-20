@@ -68,6 +68,10 @@ public class Item implements Serializable {
 		// TODO Auto-generated method stub
 		return ImageIO.read(new File("recursos//" + foto));
 	}
+	
+	public String obtenerFoto() {
+		return foto;
+	}
 	/**
 	 * Método que retorna el nombre del item.
 	 * @return Retorna el nombre del item.
