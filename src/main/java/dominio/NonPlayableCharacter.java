@@ -225,6 +225,11 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	public int getNivelNpc() {
 		return nivelNpc;
 	}
+
+	public void noAtacar() {
+		
+		
+	}
 }
 
 
