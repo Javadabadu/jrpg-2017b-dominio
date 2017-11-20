@@ -145,7 +145,11 @@ public class Mochila {
 	public Mochila() {
 		this(0);
 	}
-
+ /**
+  * Obtener un item oir su id
+  * @param i
+  * @return
+  */
 	public int obtenerItem(final int i) {
 		int retorno = 0;
 		switch (i) {
@@ -192,6 +196,58 @@ public class Mochila {
 		
 		}
 return retorno;
+		
+	}
+	/**
+	 * Establecer valor a item por su id
+	 * @param i
+	 * @param valorItem
+	 */
+	public void establecerItem(final int i, final int valorItem) {
+		
+		switch (i) {
+		case ITEM1:
+			setItem1(valorItem);
+		case ITEM2:
+			setItem2(valorItem);
+		case ITEM3:
+			setItem3(valorItem);
+		case ITEM4:
+			setItem4(valorItem);
+		case ITEM5:
+			setItem5(valorItem);
+		case ITEM6:
+			setItem6(valorItem);
+		case ITEM7:
+			setItem7(valorItem);
+		case ITEM8:
+			setItem8(valorItem);
+		case ITEM9:
+			setItem9(valorItem);
+		case ITEM10:
+			setItem10(valorItem);
+		case ITEM11:
+			setItem11(valorItem);
+		case ITEM12:
+			setItem12(valorItem);
+		case ITEM13:
+			setItem13(valorItem);
+		case ITEM14:
+			setItem4(valorItem);
+		case ITEM15:
+			setItem15(valorItem);
+		case ITEM16:
+			setItem16(valorItem);
+		case ITEM17:
+			setItem17(valorItem);
+		case ITEM18:
+			setItem18(valorItem);
+		case ITEM19:
+			setItem19(valorItem);
+		case ITEM20:
+			setItem20(valorItem);
+		
+		}
 		
 	}
 
