@@ -75,13 +75,15 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+		boolean retorno = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado((int) (caster.calcularPuntosDeMagia() * MULTIPLICADORMAGIA)) > 0) {
-				return true;
+			retorno = (atacado.serAtacado((int)
+					  (caster.calcularPuntosDeMagia()
+					  * MULTIPLICADORMAGIA)) > 0);
 			}
-		}
-		return false;
+		return retorno;
+
 	}
 
 
@@ -102,14 +104,15 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad2(final Personaje caster, final Peleable aliado) {
+		boolean cond = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (aliado instanceof Personaje) {
 				((Personaje) aliado).serCurado(caster.calcularPuntosDeMagia());
-				return true;
+				cond = true;
 			}
 		}
-		return false;
+		return cond;
 	}
 
 	/** Retorna un booleano dependiendo de si se
@@ -129,20 +132,23 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
+		boolean retorno = false;
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (atacado instanceof Personaje) {
 				int energiaRobada = ((Personaje) atacado).
-						serDesernegizado(caster.calcularPuntosDeMagia());
+				serDesernegizado(
+				caster.calcularPuntosDeMagia());
 				int saludRobada = ((Personaje) atacado).
-						serRobadoSalud(caster.calcularPuntosDeMagia() / DIVISORDEMAGIA);
+				serRobadoSalud(
+				caster.calcularPuntosDeMagia() / DIVISORDEMAGIA);
 				caster.serEnergizado(energiaRobada);
 				caster.serCurado(saludRobada);
-				return true;
+				retorno = true;
 			}
 
 		}
-		return false;
+		return retorno;
 	}
 	/** Retorna un entero que otorga el bonus de
 	 * inteligencia perteneciente a esta casta.
@@ -182,7 +188,10 @@ public class Hechicero extends Casta {
 	 */
 	@Override
 	public final String[] getHabilidadesCasta() {
-		return new String[] {"Bola de Fuego", "Curar Aliado", "Robar Energia y Salud"};
+		return new String[] {"Bola de Fuego",
+							 "Curar Aliado",
+							 "Robar "
+							 + "Energia y Salud"};
 	}
 
 
